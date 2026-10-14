@@ -1,0 +1,9 @@
+# Keep line endings deterministic: LF in the repository, on every platform.
+* text=auto eol=lf
+
+# Binary assets (if added later) must not be normalised.
+*.png binary
+*.jpg binary
+*.pdf binary
+*.zip binary
+*.parquet binary

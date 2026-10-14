@@ -1,0 +1,36 @@
+# Environments
+.venv/
+venv/
+env/
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Raw data: downloaded on demand, never committed
+# (the archive SHA-256 is recorded in data/raw/ml-100k.source.json)
+data/raw/
+data/processed/
+
+# Generated artifacts: keep the small evaluation reports, which README links to.
+# Exclude logs, trained-model dumps and figures.
+artifacts/logs/
+artifacts/models/
+artifacts/figures/
+
+# Agent/workspace metadata
+.freebuff/
+
+# Streamlit / editor / OS
+.streamlit/secrets.toml
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

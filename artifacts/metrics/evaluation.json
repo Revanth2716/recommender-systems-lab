@@ -1,0 +1,1260 @@
+{
+  "k_values": [
+    5,
+    10,
+    20
+  ],
+  "primary_k": 10,
+  "tuning": {
+    "random": {
+      "metric": "ndcg@10",
+      "split": "validation tail (fit on core train period)",
+      "best_params": {
+        "seed": 0
+      },
+      "best_validation_score": 0.008863,
+      "seconds": 0.055,
+      "candidates": [
+        {
+          "params": {
+            "seed": 0
+          },
+          "metrics": {
+            "precision": 0.008378,
+            "recall": 0.005855,
+            "ndcg": 0.008863,
+            "n_users": 943
+          }
+        }
+      ]
+    },
+    "popularity_count": {
+      "metric": "ndcg@10",
+      "split": "validation tail (fit on core train period)",
+      "best_params": {
+        "mode": "count"
+      },
+      "best_validation_score": 0.092013,
+      "seconds": 0.052,
+      "candidates": [
+        {
+          "params": {
+            "mode": "count"
+          },
+          "metrics": {
+            "precision": 0.0807,
+            "recall": 0.073843,
+            "ndcg": 0.092013,
+            "n_users": 943
+          }
+        }
+      ]
+    },
+    "popularity_bayes": {
+      "metric": "ndcg@10",
+      "split": "validation tail (fit on core train period)",
+      "best_params": {
+        "mode": "bayes",
+        "prior_count": 100.0
+      },
+      "best_validation_score": 0.06117,
+      "seconds": 0.153,
+      "candidates": [
+        {
+          "params": {
+            "mode": "bayes",
+            "prior_count": 5.0
+          },
+          "metrics": {
+            "precision": 0.036267,
+            "recall": 0.028547,
+            "ndcg": 0.037222,
+            "n_users": 943
+          }
+        },
+        {
+          "params": {
+            "mode": "bayes",
+            "prior_count": 25.0
+          },
+          "metrics": {
+            "precision": 0.042948,
+            "recall": 0.033312,
+            "ndcg": 0.046028,
+            "n_users": 943
+          }
+        },
+        {
+          "params": {
+            "mode": "bayes",
+            "prior_count": 100.0
+          },
+          "metrics": {
+            "precision": 0.052704,
+            "recall": 0.042064,
+            "ndcg": 0.06117,
+            "n_users": 943
+          }
+        }
+      ]
+    },
+    "content_based": {
+      "metric": "ndcg@10",
+      "split": "validation tail (fit on core train period)",
+      "best_params": {
+        "use_title": true,
+        "use_genre": false,
+        "profile_scheme": "raw"
+      },
+      "best_validation_score": 0.032231,
+      "seconds": 1.723,
+      "candidates": [
+        {
+          "params": {
+            "use_title": true,
+            "use_genre": false,
+            "profile_scheme": "centered"
+          },
+          "metrics": {
+            "precision": 0.01983,
+            "recall": 0.015316,
+            "ndcg": 0.026189,
+            "n_users": 943
+          }
+        },
+        {
+          "params": {
+            "use_title": true,
+            "use_genre": false,
+            "profile_scheme": "liked"
+          },
+          "metrics": {
+            "precision": 0.021103,
+            "recall": 0.016565,
+            "ndcg": 0.027022,
+            "n_users": 943
+          }
+        },
+        {
+          "params": {
+            "use_title": true,
+            "use_genre": false,
+            "profile_scheme": "raw"
+          },
+          "metrics": {
+            "precision": 0.025663,
+            "recall": 0.020892,
+            "ndcg": 0.032231,
+            "n_users": 943
+          }
+        },
+        {
+          "params": {
+            "use_title": false,
+            "use_genre": true,
+            "profile_scheme": "centered"
+          },
+          "metrics": {
+            "precision": 0.016967,
+            "recall": 0.01267,
+            "ndcg": 0.021922,
+            "n_users": 943
+          }
+        },
+        {
+          "params": {
+            "use_title": false,
+            "use_genre": true,
+            "profile_scheme": "liked"
+          },
+          "metrics": {
+            "precision": 0.016755,
+            "recall": 0.011493,
+            "ndcg": 0.020232,
+            "n_users": 943
+          }
+        },
+        {
+          "params": {
+            "use_title": false,
+            "use_genre": true,
+            "profile_scheme": "raw"
+          },
+          "metrics": {
+            "precision": 0.018346,
+            "recall": 0.013073,
+            "ndcg": 0.021602,
+            "n_users": 943
+          }
+        },
+        {
+          "params": {
+            "use_title": true,
+            "use_genre": true,
+            "profile_scheme": "centered"
+          },
+          "metrics": {
+            "precision": 0.018028,
+            "recall": 0.013447,
+            "ndcg": 0.021177,
+            "n_users": 943
+          }
+        },
+        {
+          "params": {
+            "use_title": true,
+            "use_genre": true,
+            "profile_scheme": "liked"
+          },
+          "metrics": {
+            "precision": 0.017603,
+            "recall": 0.012746,
+            "ndcg": 0.020354,
+            "n_users": 943
+          }
+        },
+        {
+          "params": {
+            "use_title": true,
+            "use_genre": true,
+            "profile_scheme": "raw"
+          },
+          "metrics": {
+            "precision": 0.018134,
+            "recall": 0.013967,
+            "ndcg": 0.020534,
+            "n_users": 943
+          }
+        }
+      ]
+    },
+    "item_item_cf": {
+      "metric": "ndcg@10",
+      "split": "validation tail (fit on core train period)",
+      "best_params": {
+        "shrink": 100.0,
+        "neighbor_k": 50
+      },
+      "best_validation_score": 0.109546,
+      "seconds": 1.214,
+      "candidates": [
+        {
+          "params": {
+            "shrink": 20.0,
+            "neighbor_k": 50
+          },
+          "metrics": {
+            "precision": 0.084411,
+            "recall": 0.072445,
+            "ndcg": 0.103948,
+            "n_users": 943
+          }
+        },
+        {
+          "params": {
+            "shrink": 20.0,
+            "neighbor_k": 200
+          },
+          "metrics": {
+            "precision": 0.078261,
+            "recall": 0.065421,
+            "ndcg": 0.095846,
+            "n_users": 943
+          }
+        },
+        {
+          "params": {
+            "shrink": 100.0,
+            "neighbor_k": 50
+          },
+          "metrics": {
+            "precision": 0.090032,
+            "recall": 0.07735,
+            "ndcg": 0.109546,
+            "n_users": 943
+          }
+        },
+        {
+          "params": {
+            "shrink": 100.0,
+            "neighbor_k": 200
+          },
+          "metrics": {
+            "precision": 0.08473,
+            "recall": 0.0709,
+            "ndcg": 0.102781,
+            "n_users": 943
+          }
+        }
+      ]
+    },
+    "svd_cf": {
+      "metric": "ndcg@10",
+      "split": "validation tail (fit on core train period)",
+      "best_params": {
+        "n_components": 20,
+        "centered": false
+      },
+      "best_validation_score": 0.157473,
+      "seconds": 0.74,
+      "candidates": [
+        {
+          "params": {
+            "n_components": 20,
+            "centered": false
+          },
+          "metrics": {
+            "precision": 0.130965,
+            "recall": 0.123995,
+            "ndcg": 0.157473,
+            "n_users": 943
+          }
+        },
+        {
+          "params": {
+            "n_components": 20,
+            "centered": true
+          },
+          "metrics": {
+            "precision": 0.074761,
+            "recall": 0.059848,
+            "ndcg": 0.087764,
+            "n_users": 943
+          }
+        },
+        {
+          "params": {
+            "n_components": 50,
+            "centered": false
+          },
+          "metrics": {
+            "precision": 0.129374,
+            "recall": 0.122612,
+            "ndcg": 0.154786,
+            "n_users": 943
+          }
+        },
+        {
+          "params": {
+            "n_components": 50,
+            "centered": true
+          },
+          "metrics": {
+            "precision": 0.069989,
+            "recall": 0.059526,
+            "ndcg": 0.082441,
+            "n_users": 943
+          }
+        },
+        {
+          "params": {
+            "n_components": 100,
+            "centered": false
+          },
+          "metrics": {
+            "precision": 0.111877,
+            "recall": 0.107867,
+            "ndcg": 0.140202,
+            "n_users": 943
+          }
+        },
+        {
+          "params": {
+            "n_components": 100,
+            "centered": true
+          },
+          "metrics": {
+            "precision": 0.055355,
+            "recall": 0.047951,
+            "ndcg": 0.067074,
+            "n_users": 943
+          }
+        }
+      ]
+    }
+  },
+  "model_results": {
+    "random": {
+      "params": {
+        "seed": 0
+      },
+      "label": "Random (seeded floor)",
+      "kind": "baseline",
+      "train_seconds": 0.0093,
+      "score_seconds": 0.0,
+      "n_items": 1682,
+      "score_min": 6.867644672947648e-07,
+      "score_max": 0.9999998846722377,
+      "metrics": {
+        "5": {
+          "precision": 0.007847,
+          "recall": 0.003039,
+          "ndcg": 0.007868,
+          "n_users": 943,
+          "coverage": 1.0
+        },
+        "10": {
+          "precision": 0.008908,
+          "recall": 0.007353,
+          "ndcg": 0.009234,
+          "n_users": 943,
+          "coverage": 1.0
+        },
+        "20": {
+          "precision": 0.008855,
+          "recall": 0.013881,
+          "ndcg": 0.011159,
+          "n_users": 943,
+          "coverage": 1.0
+        }
+      },
+      "sample_recommendations": {
+        "0": [
+          530,
+          1395,
+          308,
+          1454,
+          1287,
+          1422,
+          799,
+          1378,
+          812,
+          349,
+          762,
+          405,
+          1329,
+          1462,
+          1132,
+          736,
+          745,
+          497,
+          1597,
+          1669
+        ],
+        "1": [
+          623,
+          958,
+          1535,
+          698,
+          441,
+          931,
+          27,
+          1497,
+          383,
+          532,
+          601,
+          1200,
+          1255,
+          237,
+          196,
+          1424,
+          239,
+          458,
+          1555,
+          1122
+        ],
+        "2": [
+          52,
+          223,
+          26,
+          549,
+          564,
+          858,
+          653,
+          1548,
+          970,
+          945,
+          1003,
+          176,
+          911,
+          1358,
+          795,
+          61,
+          1372,
+          936,
+          1246,
+          60
+        ]
+      }
+    },
+    "popularity_count": {
+      "params": {
+        "mode": "count",
+        "prior_count": 25.0
+      },
+      "label": "Popularity (rating count)",
+      "kind": "popularity",
+      "train_seconds": 0.0057,
+      "score_seconds": 0.0,
+      "n_items": 1682,
+      "score_min": 0.0,
+      "score_max": 530.00000053,
+      "metrics": {
+        "5": {
+          "precision": 0.08632,
+          "recall": 0.035759,
+          "ndcg": 0.091096,
+          "n_users": 943,
+          "coverage": 0.084423
+        },
+        "10": {
+          "precision": 0.081018,
+          "recall": 0.06376,
+          "ndcg": 0.09157,
+          "n_users": 943,
+          "coverage": 0.084423
+        },
+        "20": {
+          "precision": 0.066172,
+          "recall": 0.10251,
+          "ndcg": 0.094912,
+          "n_users": 943,
+          "coverage": 0.084423
+        }
+      },
+      "sample_recommendations": {
+        "0": [
+          285,
+          293,
+          287,
+          299,
+          404,
+          312,
+          747,
+          327,
+          422,
+          301,
+          317,
+          275,
+          110,
+          741,
+          356,
+          274,
+          288,
+          474,
+          482,
+          332
+        ],
+        "1": [
+          180,
+          299,
+          120,
+          173,
+          6,
+          55,
+          97,
+          171,
+          116,
+          221,
+          203,
+          68,
+          172,
+          78,
+          404,
+          209,
+          312,
+          167,
+          150,
+          194
+        ],
+        "2": [
+          49,
+          99,
+          180,
+          285,
+          0,
+          120,
+          173,
+          126,
+          6,
+          55,
+          97,
+          236,
+          171,
+          116,
+          221,
+          203,
+          68,
+          172,
+          78,
+          404
+        ]
+      }
+    },
+    "popularity_bayes": {
+      "params": {
+        "mode": "bayes",
+        "prior_count": 100.0
+      },
+      "label": "Popularity (Bayesian, m=100)",
+      "kind": "popularity",
+      "train_seconds": 0.0055,
+      "score_seconds": 0.0,
+      "n_items": 1682,
+      "score_min": 2.9884748841270556,
+      "score_max": 4.223069737630461,
+      "metrics": {
+        "5": {
+          "precision": 0.063203,
+          "recall": 0.023745,
+          "ndcg": 0.068275,
+          "n_users": 943,
+          "coverage": 0.067182
+        },
+        "10": {
+          "precision": 0.055355,
+          "recall": 0.041296,
+          "ndcg": 0.064732,
+          "n_users": 943,
+          "coverage": 0.067182
+        },
+        "20": {
+          "precision": 0.045175,
+          "recall": 0.066573,
+          "ndcg": 0.065257,
+          "n_users": 943,
+          "coverage": 0.067182
+        }
+      },
+      "sample_recommendations": {
+        "0": [
+          317,
+          482,
+          602,
+          356,
+          312,
+          426,
+          407,
+          478,
+          284,
+          479,
+          510,
+          514,
+          473,
+          301,
+          271,
+          656,
+          495,
+          497,
+          483,
+          653
+        ],
+        "1": [
+          317,
+          63,
+          482,
+          11,
+          97,
+          173,
+          602,
+          356,
+          312,
+          168,
+          133,
+          426,
+          171,
+          407,
+          172,
+          190,
+          21,
+          478,
+          479,
+          510
+        ],
+        "2": [
+          49,
+          317,
+          63,
+          482,
+          11,
+          97,
+          126,
+          173,
+          602,
+          356,
+          312,
+          99,
+          168,
+          133,
+          426,
+          171,
+          407,
+          172,
+          190,
+          21
+        ]
+      }
+    },
+    "content_based": {
+      "params": {
+        "use_title": true,
+        "use_genre": false,
+        "profile_scheme": "raw"
+      },
+      "label": "Content-based (title, raw)",
+      "kind": "content",
+      "train_seconds": 0.1392,
+      "score_seconds": 0.0,
+      "n_items": 1682,
+      "score_min": 0.0,
+      "score_max": 0.6954598678939736,
+      "metrics": {
+        "5": {
+          "precision": 0.030541,
+          "recall": 0.014066,
+          "ndcg": 0.03338,
+          "n_users": 943,
+          "coverage": 0.437574
+        },
+        "10": {
+          "precision": 0.02492,
+          "recall": 0.021601,
+          "ndcg": 0.031199,
+          "n_users": 943,
+          "coverage": 0.437574
+        },
+        "20": {
+          "precision": 0.019565,
+          "recall": 0.032322,
+          "ndcg": 0.031602,
+          "n_users": 943,
+          "coverage": 0.437574
+        }
+      },
+      "sample_recommendations": {
+        "0": [
+          379,
+          449,
+          448,
+          1292,
+          921,
+          1060,
+          1264,
+          529,
+          1422,
+          1187,
+          914,
+          1645,
+          1137,
+          492,
+          512,
+          1565,
+          188,
+          814,
+          1022,
+          1639
+        ],
+        "1": [
+          1285,
+          661,
+          186,
+          711,
+          221,
+          1137,
+          1149,
+          1411,
+          756,
+          648,
+          988,
+          645,
+          864,
+          485,
+          894,
+          760,
+          896,
+          1431,
+          436,
+          1509
+        ],
+        "2": [
+          979,
+          245,
+          296,
+          938,
+          1668,
+          1655,
+          611,
+          35,
+          773,
+          574,
+          182,
+          664,
+          1142,
+          894,
+          847,
+          504,
+          492,
+          512,
+          1565,
+          1342
+        ]
+      }
+    },
+    "item_item_cf": {
+      "params": {
+        "shrink": 100.0,
+        "neighbor_k": 50
+      },
+      "label": "Item-item CF (shrink=100, k=50)",
+      "kind": "collaborative",
+      "train_seconds": 0.2442,
+      "score_seconds": 0.0,
+      "n_items": 1682,
+      "score_min": -4.899137503567342,
+      "score_max": 19.321231056481007,
+      "metrics": {
+        "5": {
+          "precision": 0.111983,
+          "recall": 0.046273,
+          "ndcg": 0.118409,
+          "n_users": 943,
+          "coverage": 0.34126
+        },
+        "10": {
+          "precision": 0.090244,
+          "recall": 0.073472,
+          "ndcg": 0.108366,
+          "n_users": 943,
+          "coverage": 0.34126
+        },
+        "20": {
+          "precision": 0.073118,
+          "recall": 0.118126,
+          "ndcg": 0.11254,
+          "n_users": 943,
+          "coverage": 0.34126
+        }
+      },
+      "sample_recommendations": {
+        "0": [
+          317,
+          482,
+          356,
+          602,
+          650,
+          473,
+          510,
+          478,
+          479,
+          495,
+          654,
+          426,
+          434,
+          407,
+          526,
+          208,
+          422,
+          683,
+          519,
+          514
+        ],
+        "1": [
+          173,
+          180,
+          171,
+          97,
+          63,
+          11,
+          186,
+          317,
+          190,
+          482,
+          55,
+          356,
+          172,
+          182,
+          134,
+          88,
+          123,
+          514,
+          184,
+          602
+        ],
+        "2": [
+          245,
+          300,
+          304,
+          12,
+          339,
+          874,
+          897,
+          886,
+          23,
+          288,
+          41,
+          296,
+          328,
+          346,
+          875,
+          310,
+          884,
+          751,
+          144,
+          1283
+        ]
+      }
+    },
+    "svd_cf": {
+      "params": {
+        "n_components": 20,
+        "centered": false
+      },
+      "label": "PureSVD (k=20, raw)",
+      "kind": "collaborative",
+      "train_seconds": 0.0301,
+      "score_seconds": 0.0,
+      "n_items": 1682,
+      "score_min": -3.0368377361122416,
+      "score_max": 8.346250602432736,
+      "metrics": {
+        "5": {
+          "precision": 0.153977,
+          "recall": 0.066199,
+          "ndcg": 0.161774,
+          "n_users": 943,
+          "coverage": 0.334721
+        },
+        "10": {
+          "precision": 0.136797,
+          "recall": 0.117988,
+          "ndcg": 0.15942,
+          "n_users": 943,
+          "coverage": 0.334721
+        },
+        "20": {
+          "precision": 0.11421,
+          "recall": 0.197878,
+          "ndcg": 0.173816,
+          "n_users": 943,
+          "coverage": 0.334721
+        }
+      },
+      "sample_recommendations": {
+        "0": [
+          474,
+          654,
+          208,
+          402,
+          356,
+          432,
+          317,
+          430,
+          422,
+          514,
+          274,
+          384,
+          285,
+          745,
+          731,
+          482,
+          581,
+          454,
+          407,
+          530
+        ],
+        "1": [
+          123,
+          136,
+          180,
+          8,
+          474,
+          14,
+          301,
+          514,
+          115,
+          267,
+          318,
+          288,
+          116,
+          247,
+          245,
+          320,
+          221,
+          149,
+          6,
+          125
+        ],
+        "2": [
+          327,
+          285,
+          312,
+          268,
+          288,
+          300,
+          747,
+          339,
+          689,
+          330,
+          878,
+          291,
+          269,
+          681,
+          677,
+          309,
+          750,
+          303,
+          894,
+          258
+        ]
+      }
+    }
+  },
+  "protocol": {
+    "schema": "per-user temporal leave-last-n, all-unrated-item ranking",
+    "split": {
+      "core": {
+        "n_train": 74905,
+        "n_test": 12487,
+        "test_fraction": 0.1429,
+        "mean_test_per_user": 13.242,
+        "min_test_per_user": 4
+      },
+      "validation_items": 12487,
+      "final": {
+        "n_train": 87392,
+        "n_test": 12608,
+        "test_fraction": 0.1261,
+        "mean_test_per_user": 13.37,
+        "min_test_per_user": 4
+      },
+      "test_items": 12608
+    },
+    "k_values": [
+      5,
+      10,
+      20
+    ],
+    "primary_k": 10,
+    "tuning_metric": "ndcg@10 on the validation tail",
+    "test_used_for_tuning": false
+  },
+  "comparison": [
+    {
+      "model": "random",
+      "label": "Random (seeded floor)",
+      "kind": "baseline",
+      "k": 5,
+      "precision": 0.007847,
+      "recall": 0.003039,
+      "ndcg": 0.007868,
+      "coverage": 1.0,
+      "train_seconds": 0.0093,
+      "params": "{\"seed\": 0}"
+    },
+    {
+      "model": "random",
+      "label": "Random (seeded floor)",
+      "kind": "baseline",
+      "k": 10,
+      "precision": 0.008908,
+      "recall": 0.007353,
+      "ndcg": 0.009234,
+      "coverage": 1.0,
+      "train_seconds": 0.0093,
+      "params": "{\"seed\": 0}"
+    },
+    {
+      "model": "random",
+      "label": "Random (seeded floor)",
+      "kind": "baseline",
+      "k": 20,
+      "precision": 0.008855,
+      "recall": 0.013881,
+      "ndcg": 0.011159,
+      "coverage": 1.0,
+      "train_seconds": 0.0093,
+      "params": "{\"seed\": 0}"
+    },
+    {
+      "model": "popularity_count",
+      "label": "Popularity (rating count)",
+      "kind": "popularity",
+      "k": 5,
+      "precision": 0.08632,
+      "recall": 0.035759,
+      "ndcg": 0.091096,
+      "coverage": 0.084423,
+      "train_seconds": 0.0057,
+      "params": "{\"mode\": \"count\", \"prior_count\": 25.0}"
+    },
+    {
+      "model": "popularity_count",
+      "label": "Popularity (rating count)",
+      "kind": "popularity",
+      "k": 10,
+      "precision": 0.081018,
+      "recall": 0.06376,
+      "ndcg": 0.09157,
+      "coverage": 0.084423,
+      "train_seconds": 0.0057,
+      "params": "{\"mode\": \"count\", \"prior_count\": 25.0}"
+    },
+    {
+      "model": "popularity_count",
+      "label": "Popularity (rating count)",
+      "kind": "popularity",
+      "k": 20,
+      "precision": 0.066172,
+      "recall": 0.10251,
+      "ndcg": 0.094912,
+      "coverage": 0.084423,
+      "train_seconds": 0.0057,
+      "params": "{\"mode\": \"count\", \"prior_count\": 25.0}"
+    },
+    {
+      "model": "popularity_bayes",
+      "label": "Popularity (Bayesian, m=100)",
+      "kind": "popularity",
+      "k": 5,
+      "precision": 0.063203,
+      "recall": 0.023745,
+      "ndcg": 0.068275,
+      "coverage": 0.067182,
+      "train_seconds": 0.0055,
+      "params": "{\"mode\": \"bayes\", \"prior_count\": 100.0}"
+    },
+    {
+      "model": "popularity_bayes",
+      "label": "Popularity (Bayesian, m=100)",
+      "kind": "popularity",
+      "k": 10,
+      "precision": 0.055355,
+      "recall": 0.041296,
+      "ndcg": 0.064732,
+      "coverage": 0.067182,
+      "train_seconds": 0.0055,
+      "params": "{\"mode\": \"bayes\", \"prior_count\": 100.0}"
+    },
+    {
+      "model": "popularity_bayes",
+      "label": "Popularity (Bayesian, m=100)",
+      "kind": "popularity",
+      "k": 20,
+      "precision": 0.045175,
+      "recall": 0.066573,
+      "ndcg": 0.065257,
+      "coverage": 0.067182,
+      "train_seconds": 0.0055,
+      "params": "{\"mode\": \"bayes\", \"prior_count\": 100.0}"
+    },
+    {
+      "model": "content_based",
+      "label": "Content-based (title, raw)",
+      "kind": "content",
+      "k": 5,
+      "precision": 0.030541,
+      "recall": 0.014066,
+      "ndcg": 0.03338,
+      "coverage": 0.437574,
+      "train_seconds": 0.1392,
+      "params": "{\"profile_scheme\": \"raw\", \"use_genre\": false, \"use_title\": true}"
+    },
+    {
+      "model": "content_based",
+      "label": "Content-based (title, raw)",
+      "kind": "content",
+      "k": 10,
+      "precision": 0.02492,
+      "recall": 0.021601,
+      "ndcg": 0.031199,
+      "coverage": 0.437574,
+      "train_seconds": 0.1392,
+      "params": "{\"profile_scheme\": \"raw\", \"use_genre\": false, \"use_title\": true}"
+    },
+    {
+      "model": "content_based",
+      "label": "Content-based (title, raw)",
+      "kind": "content",
+      "k": 20,
+      "precision": 0.019565,
+      "recall": 0.032322,
+      "ndcg": 0.031602,
+      "coverage": 0.437574,
+      "train_seconds": 0.1392,
+      "params": "{\"profile_scheme\": \"raw\", \"use_genre\": false, \"use_title\": true}"
+    },
+    {
+      "model": "item_item_cf",
+      "label": "Item-item CF (shrink=100, k=50)",
+      "kind": "collaborative",
+      "k": 5,
+      "precision": 0.111983,
+      "recall": 0.046273,
+      "ndcg": 0.118409,
+      "coverage": 0.34126,
+      "train_seconds": 0.2442,
+      "params": "{\"neighbor_k\": 50, \"shrink\": 100.0}"
+    },
+    {
+      "model": "item_item_cf",
+      "label": "Item-item CF (shrink=100, k=50)",
+      "kind": "collaborative",
+      "k": 10,
+      "precision": 0.090244,
+      "recall": 0.073472,
+      "ndcg": 0.108366,
+      "coverage": 0.34126,
+      "train_seconds": 0.2442,
+      "params": "{\"neighbor_k\": 50, \"shrink\": 100.0}"
+    },
+    {
+      "model": "item_item_cf",
+      "label": "Item-item CF (shrink=100, k=50)",
+      "kind": "collaborative",
+      "k": 20,
+      "precision": 0.073118,
+      "recall": 0.118126,
+      "ndcg": 0.11254,
+      "coverage": 0.34126,
+      "train_seconds": 0.2442,
+      "params": "{\"neighbor_k\": 50, \"shrink\": 100.0}"
+    },
+    {
+      "model": "svd_cf",
+      "label": "PureSVD (k=20, raw)",
+      "kind": "collaborative",
+      "k": 5,
+      "precision": 0.153977,
+      "recall": 0.066199,
+      "ndcg": 0.161774,
+      "coverage": 0.334721,
+      "train_seconds": 0.0301,
+      "params": "{\"centered\": false, \"n_components\": 20}"
+    },
+    {
+      "model": "svd_cf",
+      "label": "PureSVD (k=20, raw)",
+      "kind": "collaborative",
+      "k": 10,
+      "precision": 0.136797,
+      "recall": 0.117988,
+      "ndcg": 0.15942,
+      "coverage": 0.334721,
+      "train_seconds": 0.0301,
+      "params": "{\"centered\": false, \"n_components\": 20}"
+    },
+    {
+      "model": "svd_cf",
+      "label": "PureSVD (k=20, raw)",
+      "kind": "collaborative",
+      "k": 20,
+      "precision": 0.11421,
+      "recall": 0.197878,
+      "ndcg": 0.173816,
+      "coverage": 0.334721,
+      "train_seconds": 0.0301,
+      "params": "{\"centered\": false, \"n_components\": 20}"
+    }
+  ],
+  "dataset": {
+    "n_ratings": 100000,
+    "n_users": 943,
+    "n_items": 1682,
+    "min_rating": 1,
+    "max_rating": 5,
+    "n_genres": 19,
+    "sparsity": 0.937,
+    "mean_rating": 3.5299,
+    "source": "https://files.grouplens.org/datasets/movielens/ml-100k.zip"
+  }
+}
